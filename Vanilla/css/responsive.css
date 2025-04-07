@@ -1,0 +1,315 @@
+/* === Responsive Styles === */
+
+/* Small Devices (tablets, 768px and up) */
+@media (max-width: 768px) {
+    /* Base Styles */
+    .container {
+        width: 95%;
+        padding: 0 var(--spacing-sm);
+    }
+
+    .section-title h2 {
+        font-size: 1.75rem;
+    }
+
+    .section-title p {
+        font-size: 1rem;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    .page-header h1 {
+        font-size: 2rem;
+    }
+
+    .page-header p {
+        font-size: 1rem;
+    }
+
+    /* Header & Navigation */
+    header .container {
+        flex-wrap: wrap;
+    }
+
+    .mobile-menu-toggle {
+        display: block;
+    }
+
+    #main-nav {
+        width: 100%;
+        margin-top: var(--spacing-md);
+    }
+
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-list.active {
+        display: flex;
+    }
+
+    .nav-list li {
+        margin: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-list a {
+        display: block;
+        padding: var(--spacing-md);
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .nav-list a.active::after {
+        display: none;
+    }
+
+    /* Hero Section */
+    .hero {
+        padding: var(--spacing-xl) 0;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        gap: var(--spacing-md);
+    }
+
+    /* Features Section */
+    .feature-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Services Highlight */
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Testimonials */
+    .testimonial-slider {
+        flex-direction: column;
+    }
+
+    .testimonial-card {
+        width: 100%;
+    }
+
+    /* Footer */
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+
+    /* Services Page */
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-detailed {
+        flex-direction: column;
+    }
+
+    .service-icon {
+        padding: var(--spacing-md);
+    }
+
+    /* Doctors Page */
+    .search-filters {
+        flex-direction: column;
+    }
+
+    .doctors-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .doctor-card {
+        flex-direction: column;
+    }
+
+    .doctor-image {
+        height: 150px;
+    }
+
+    /* About Page */
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .achievements-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .leadership-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .facilities-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Contact Page */
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Mobile Devices (up to 576px) */
+@media (max-width: 576px) {
+    /* Base Styles */
+    .section-title h2 {
+        font-size: 1.5rem;
+    }
+
+    .page-header h1 {
+        font-size: 1.75rem;
+    }
+
+    /* Features Section */
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Services Highlight */
+    .services-cta {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Achievements */
+    .achievements-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Contact Page */
+    .contact-details h2,
+    .contact-form-container h2 {
+        font-size: 1.75rem;
+    }
+
+    /* FAQ Section */
+    .faq-question h3 {
+        font-size: 1rem;
+    }
+}
+
+/* Medium Devices (desktops, 992px and up) */
+@media (min-width: 769px) and (max-width: 992px) {
+    /* Hero Section */
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    /* Features Section */
+    .feature-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Services Highlight */
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Footer */
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Achievements */
+    .achievements-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* About Page */
+    .values-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Large Devices (large desktops, 1200px and up) */
+@media (min-width: 993px) {
+    /* Mobile Menu Toggle */
+    .mobile-menu-toggle {
+        display: none;
+    }
+
+    /* Main Navigation */
+    .nav-list {
+        display: flex !important;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .mobile-menu-toggle,
+    .cta-section,
+    .hero,
+    .testimonials,
+    footer {
+        display: none;
+    }
+
+    body {
+        font-size: 12pt;
+        line-height: 1.3;
+    }
+
+    a {
+        text-decoration: none;
+        color: #000;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        page-break-after: avoid;
+        page-break-inside: avoid;
+    }
+
+    p, ul, ol, dl {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    header {
+        position: static;
+        box-shadow: none;
+        border-bottom: 1pt solid #000;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .page-header {
+        background-color: transparent;
+        padding: 1cm 0;
+        border-bottom: 1pt solid #000;
+    }
+
+    .section-title {
+        margin-bottom: 1cm;
+    }
+}

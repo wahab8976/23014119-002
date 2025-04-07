@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediCare Hospital - Quality Healthcare For All</title>
+    <meta name="description" content="MediCare Hospital provides comprehensive healthcare services with state-of-the-art facilities and experienced medical professionals.">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#1a73e8",
+                        "primary-dark": "#0d47a1",
+                        "primary-light": "#e8f0fe",
+                        secondary: "#34a853",
+                        accent: "#fbbc04",
+                        danger: "#ea4335",
+                        "text-dark": "#202124",
+                        "text-medium": "#5f6368",
+                        "text-light": "#80868b",
+                        "background-light": "#f8f9fa",
+                        "background-white": "#ffffff",
+                        "background-dark": "#202124",
+                        "border-color": "#dadce0"
+                    },
+                    spacing: {
+                        'xs': '4px',
+                        'sm': '8px',
+                        'md': '16px',
+                        'lg': '24px',
+                        'xl': '32px',
+                        'xxl': '48px'
+                    },
+                    borderRadius: {
+                        'sm': '4px',
+                        'md': '8px',
+                        'lg': '12px'
+                    },
+                    boxShadow: {
+                        'sm': '0 1px 2px rgba(60, 64, 67, 0.1)',
+                        'md': '0 2px 4px rgba(60, 64, 67, 0.1)',
+                        'lg': '0 4px 8px rgba(60, 64, 67, 0.1)'
+                    },
+                    fontFamily: {
+                        'sans': ['Roboto', 'Arial', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* Basic styles that are not easy to do directly with Tailwind utility classes */
+        .mobile-menu-toggle span:nth-child(1) {
+            transform: translateY(-6px);
+        }
+        .mobile-menu-toggle span:nth-child(3) {
+            transform: translateY(6px);
+        }
+        
+        .mobile-menu-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translateY(0);
+        }
+        .mobile-menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+        .mobile-menu-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translateY(0);
+        }
+    </style>
+</head>
+<body class="font-sans text-text-dark bg-background-white">
+    <header class="bg-background-white shadow-md sticky top-0 z-50 py-md">
+        <div class="w-[90%] max-w-[1200px] mx-auto px-md flex justify-between items-center">
+            <div class="logo">
+                <a href="index.html" class="flex items-center text-text-dark">
+                    <img src="assets/logo.svg" alt="MediCare Hospital Logo" class="w-10 h-10 mr-sm">
+                    <span class="text-2xl font-bold text-primary">MediCare</span>
+                </a>
+            </div>
+            <nav id="main-nav">
+                <button class="mobile-menu-toggle relative w-[30px] h-[30px] border-none bg-transparent cursor-pointer md:hidden" id="menu-toggle">
+                    <span class="block absolute h-[3px] w-full bg-text-dark rounded-sm transition-all duration-300"></span>
+                    <span class="block absolute h-[3px] w-full bg-text-dark rounded-sm transition-all duration-300"></span>
+                    <span class="block absolute h-[3px] w-full bg-text-dark rounded-sm transition-all duration-300"></span>
+                </button>
+                <ul class="nav-list hidden md:flex">
+                    <li class="md:mx-md"><a href="index.html" class="font-medium py-sm relative text-primary after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2px] after:bg-primary">Home</a></li>
+                    <li class="md:mx-md"><a href="services.html" class="font-medium py-sm relative text-text-dark hover:text-primary">Services</a></li>
+                    <li class="md:mx-md"><a href="doctors.html" class="font-medium py-sm relative text-text-dark hover:text-primary">Our Doctors</a></li>
+                    <li class="md:mx-md"><a href="about.html" class="font-medium py-sm relative text-text-dark hover:text-primary">About Us</a></li>
+                    <li class="md:mx-md"><a href="contact.html" class="font-medium py-sm relative text-text-dark hover:text-primary">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="py-xxl bg-primary-light">
+        <div class="w-[90%] max-w-[1200px] mx-auto px-md">
+            <div class="max-w-[800px] mx-auto text-center">
+                <h1 class="text-5xl md:text-4xl sm:text-3xl mb-md text-primary-dark">Expert Healthcare For Your Family</h1>
+                <p class="text-xl md:text-lg sm:text-base mb-lg text-text-medium">Providing quality healthcare services with compassion and care</p>
+                <div class="flex flex-col md:flex-row justify-center gap-md">
+                    <a href="contact.html" class="inline-block px-6 py-3 rounded-md bg-primary text-white font-semibold transition-all hover:bg-primary-dark">Schedule Appointment</a>
+                    <a href="services.html" class="inline-block px-6 py-3 rounded-md bg-white text-primary font-semibold border border-primary transition-all hover:bg-primary-light">Our Services</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-xxl">
+        <div class="w-[90%] max-w-[1200px] mx-auto px-md">
+            <div class="text-center mb-xl">
+                <h2 class="text-4xl md:text-3xl sm:text-2xl mb-sm">Why Choose MediCare Hospital</h2>
+                <p class="text-lg sm:text-base text-text-medium max-w-[800px] mx-auto">We are committed to providing exceptional care and services</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-lg">
+                <div class="bg-background-light p-lg rounded-md text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+                    <div class="w-16 h-16 mx-auto mb-md text-primary">
+                        <svg viewBox="0 0 24 24" width="48" height="48" stroke="currentColor" stroke-width="2" fill="none">
+                            <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl mb-sm">Advanced Technology</h3>
+                    <p class="text-text-medium">State-of-the-art equipment and facilities to provide the best diagnosis and treatment.</p>
+                </div>
+                <div class="bg-background-light p-lg rounded-md text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+                    <div class="w-16 h-16 mx-auto mb-md text-primary">
+                        <svg viewBox="0 0 24 24" width="48" height="48" stroke="currentColor" stroke-width="2" fill="none">
+                            <path d="M20 7h-9"></path>
+                            <path d="M14 17H5"></path>
+                            <circle cx="17" cy="17" r="3"></circle>
+                            <circle cx="7" cy="7" r="3"></circle>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl mb-sm">Experienced Specialists</h3>
+                    <p class="text-text-medium">Our team of highly qualified and experienced medical professionals.</p>
+                </div>
+                <div class="bg-background-light p-lg rounded-md text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+                    <div class="w-16 h-16 mx-auto mb-md text-primary">
+                        <svg viewBox="0 0 24 24" width="48" height="48" stroke="currentColor" stroke-width="2" fill="none">
+                            <path d="M3 18v-6a9 9 0 0 1 18 0v6"></path>
+                            <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl mb-sm">24/7 Support</h3>
+                    <p class="text-text-medium">Round-the-clock emergency services and patient care support.</p>
+                </div>
+                <div class="bg-background-light p-lg rounded-md text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+                    <div class="w-16 h-16 mx-auto mb-md text-primary">
+                        <svg viewBox="0 0 24 24" width="48" height="48" stroke="currentColor" stroke-width="2" fill="none">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl mb-sm">Patient-Centered Care</h3>
+                    <p class="text-text-medium">Personalized care plans tailored to individual needs and preferences.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-xxl bg-background-white">
+        <div class="w-[90%] max-w-[1200px] mx-auto px-md">
+            <div class="text-center mb-xl">
+                <h2 class="text-4xl md:text-3xl sm:text-2xl mb-sm">Our Key Services</h2>
+                <p class="text-lg sm:text-base text-text-medium max-w-[800px] mx-auto">Comprehensive healthcare solutions for you and your family</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-lg mb-xl">
+                <div class="bg-background-light p-lg rounded-md transition-all duration-300 hover:-translate-y-1 hover:shadow-md border-t-4 border-primary">
+                    <h3 class="text-2xl mb-sm text-text-dark">Cardiology</h3>
+                    <p class="mb-md text-text-medium">Expert care for heart and vascular conditions with advanced diagnostic and treatment options.</p>
+                    <a href="services.html#cardiology" class="font-semibold inline-flex items-center text-primary transition-all">
+                        Learn More
+                        <span class="ml-xs transition-all duration-300 group-hover:ml-sm">→</span>
+                    </a>
+                </div>
+                <div class="bg-background-light p-lg rounded-md transition-all duration-300 hover:-translate-y-1 hover:shadow-md border-t-4 border-primary">
+                    <h3 class="text-2xl mb-sm text-text-dark">Orthopedics</h3>
+                    <p class="mb-md text-text-medium">Specialized care for bone, joint, and muscle conditions with surgical and non-surgical treatments.</p>
+                    <a href="services.html#orthopedics" class="font-semibold inline-flex items-center text-primary transition-all">
+                        Learn More
+                        <span class="ml-xs transition-all duration-300 group-hover:ml-sm">→</span>
+                    </a>
+                </div>
+                <div class="bg-background-light p-lg rounded-md transition-all duration-300 hover:-translate-y-1 hover:shadow-md border-t-4 border-primary">
+                    <h3 class="text-2xl mb-sm text-text-dark">Pediatrics</h3>
+                    <p class="mb-md text-text-medium">Comprehensive healthcare for infants, children, and adolescents in a child-friendly environment.</p>
+                    <a href="services.html#pediatrics" class="font-semibold inline-flex items-center text-primary transition-all">
+                        Learn More
+                        <span class="ml-xs transition-all duration-300 group-hover:ml-sm">→</span>
+                    </a>
+                </div>
+            </div>
+            <div class="text-center">
+                <a href="services.html" class="inline-block px-6 py-3 rounded-md bg-primary text-white font-semibold transition-all hover:bg-primary-dark">View All Services</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-xxl bg-primary-light">
+        <div class="w-[90%] max-w-[1200px] mx-auto px-md">
+            <div class="text-center mb-xl">
+                <h2 class="text-4xl md:text-3xl sm:text-2xl mb-sm">Patient Testimonials</h2>
+                <p class="text-lg sm:text-base text-text-medium max-w-[800px] mx-auto">What our patients say about their experience</p>
+            </div>
+            <div class="flex flex-wrap justify-center gap-lg">
+                <div class="bg-background-white p-lg rounded-md shadow-md max-w-xl">
+                    <div class="mb-md">
+                        <p class="italic text-text-medium leading-relaxed">"The care I received at MediCare Hospital was exceptional. The doctors were knowledgeable and compassionate, and the staff was attentive to all my needs."</p>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold mb-xs">Sarah Johnson</h4>
+                        <p class="text-text-light text-sm">Cardiac Patient</p>
+                    </div>
+                </div>
+                <div class="bg-background-white p-lg rounded-md shadow-md max-w-xl">
+                    <div class="mb-md">
+                        <p class="italic text-text-medium leading-relaxed">"I was particularly impressed with the cleanliness of the facility and the efficiency of the services. The entire process from admission to discharge was smooth and well-organized."</p>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold mb-xs">Michael Thompson</h4>
+                        <p class="text-text-light text-sm">Orthopedic Patient</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-xxl bg-primary text-background-white">
+        <div class="w-[90%] max-w-[1200px] mx-auto px-md">
+            <div class="text-center">
+                <h2 class="text-4xl md:text-3xl sm:text-2xl mb-sm">Need Medical Assistance?</h2>
+                <p class="mb-lg text-lg sm:text-base">Our team of healthcare professionals is ready to help you</p>
+                <a href="contact.html" class="inline-block px-6 py-3 rounded-md bg-white text-primary font-semibold transition-all hover:bg-primary-light">Contact Us Today</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-background-dark text-background-white pt-xxl">
+        <div class="w-[90%] max-w-[1200px] mx-auto px-md">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-xl mb-xl">
+                <div>
+                    <div class="flex items-center mb-md">
+                        <img src="assets/logo.svg" alt="MediCare Hospital Logo" class="w-10 h-10 mr-sm">
+                        <span class="text-xl font-bold text-background-white">MediCare Hospital</span>
+                    </div>
+                    <p class="text-text-light mb-md">Providing quality healthcare services since 1995.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl mb-lg relative after:content-[''] after:absolute after:left-0 after:bottom-[-8px] after:w-10 after:h-0.5 after:bg-primary">Quick Links</h3>
+                    <ul>
+                        <li class="mb-sm"><a href="index.html" class="text-text-light transition-all duration-300 hover:text-primary-light hover:ml-xs block">Home</a></li>
+                        <li class="mb-sm"><a href="services.html" class="text-text-light transition-all duration-300 hover:text-primary-light hover:ml-xs block">Services</a></li>
+                        <li class="mb-sm"><a href="doctors.html" class="text-text-light transition-all duration-300 hover:text-primary-light hover:ml-xs block">Our Doctors</a></li>
+                        <li class="mb-sm"><a href="about.html" class="text-text-light transition-all duration-300 hover:text-primary-light hover:ml-xs block">About Us</a></li>
+                        <li class="mb-sm"><a href="contact.html" class="text-text-light transition-all duration-300 hover:text-primary-light hover:ml-xs block">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl mb-lg relative after:content-[''] after:absolute after:left-0 after:bottom-[-8px] after:w-10 after:h-0.5 after:bg-primary">Contact Us</h3>
+                    <ul>
+                        <li class="flex items-start mb-md text-text-light">
+                            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" class="text-primary mr-sm flex-shrink-0" stroke-width="2" fill="none">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            <span>123 Medical Center Drive, Healthcare City</span>
+                        </li>
+                        <li class="flex items-start mb-md text-text-light">
+                            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" class="text-primary mr-sm flex-shrink-0" stroke-width="2" fill="none">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                            <span>(123) 456-7890</span>
+                        </li>
+                        <li class="flex items-start mb-md text-text-light">
+                            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" class="text-primary mr-sm flex-shrink-0" stroke-width="2" fill="none">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                            <span>info@medicarehospital.com</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl mb-lg relative after:content-[''] after:absolute after:left-0 after:bottom-[-8px] after:w-10 after:h-0.5 after:bg-primary">Working Hours</h3>
+                    <ul>
+                        <li class="mb-md text-text-light"><span class="font-semibold text-background-white mr-sm">Emergency:</span> 24/7</li>
+                        <li class="mb-md text-text-light"><span class="font-semibold text-background-white mr-sm">Regular Outpatient:</span> Mon-Fri 8:00AM - 8:00PM</li>
+                        <li class="mb-md text-text-light"><span class="font-semibold text-background-white mr-sm">Weekend Outpatient:</span> Sat-Sun 10:00AM - 4:00PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-opacity-10 border-white py-lg text-center">
+                <p class="text-text-light text-sm">&copy; 2023 MediCare Hospital. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
+    <script src="js/script.js"></script>
+</body>
+</html>

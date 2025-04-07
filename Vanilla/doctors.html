@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Doctors - MediCare Hospital</title>
+    <meta name="description" content="Meet our highly qualified and experienced medical professionals at MediCare Hospital who are dedicated to providing exceptional care.">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/logo.svg" alt="MediCare Hospital Logo">
+                    <span>MediCare</span>
+                </a>
+            </div>
+            <nav id="main-nav">
+                <button class="mobile-menu-toggle" id="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="doctors.html" class="active">Our Doctors</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Our Medical Experts</h1>
+            <p>Meet our team of experienced healthcare professionals</p>
+        </div>
+    </section>
+
+    <section class="doctor-search">
+        <div class="container">
+            <div class="search-container">
+                <h2>Find a Doctor</h2>
+                <div class="search-filters">
+                    <div class="filter-group">
+                        <label for="specialty">Specialty</label>
+                        <select id="specialty" name="specialty">
+                            <option value="">All Specialties</option>
+                            <option value="cardiology">Cardiology</option>
+                            <option value="neurology">Neurology</option>
+                            <option value="orthopedics">Orthopedics</option>
+                            <option value="pediatrics">Pediatrics</option>
+                            <option value="oncology">Oncology</option>
+                            <option value="gynecology">Obstetrics & Gynecology</option>
+                            <option value="dermatology">Dermatology</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="search">Search by Name</label>
+                        <input type="text" id="search" name="search" placeholder="Enter doctor's name">
+                    </div>
+                    <button class="btn btn-primary" id="search-btn">Search</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="doctors-list">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Medical Team</h2>
+                <p>Dedicated professionals committed to providing exceptional care</p>
+            </div>
+            
+            <div class="specialty-section" id="cardiology-section">
+                <h3>Cardiology</h3>
+                <div class="doctors-grid">
+                    <div class="doctor-card">
+                        <div class="doctor-image placeholder-image">
+                            <svg viewBox="0 0 24 24" width="64" height="64" stroke="currentColor" stroke-width="2" fill="none">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                        </div>
+                        <div class="doctor-info">
+                            <h4>Dr. Jonathan Miller</h4>
+                            <p class="doctor-specialty">Cardiologist</p>
+                            <p class="doctor-credentials">MD, FACC</p>
+                            <p class="doctor-bio">Dr. Miller is a board-certified cardiologist with over 15 years of experience in diagnosing and treating heart conditions. He specializes in interventional cardiology and preventive cardiac care.</p>
+                            <div class="doctor-details">
+                                <p><strong>Languages:</strong> English, Spanish</p>
+                                <p><strong>Education:</strong> Harvard Medical School</p>
+                            </div>
+                            <div class="doctor-schedule">
+                                <a href="contact.html" class="btn btn-outline">Schedule Appointment</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="doctor-card">
+                        <div class="doctor-image placeholder-image">
+                            <svg viewBox="0 0 24 24" width="64" height="64" stroke="currentColor" stroke-width="2" fill="none">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                        </div>
+                        <div class="doctor-info">
+                            <h4>Dr. Sarah Chen</h4>
+                            <p class="doctor-specialty">Cardiac Electrophysiologist</p>
+                            <p class="doctor-credentials">MD, PhD</p>
+                            <p class="doctor-bio">Dr. Chen specializes in the diagnosis and treatment of heart rhythm disorders. She has particular expertise in cardiac ablation procedures and pacemaker implantation.</p>
+                            <div class="doctor-details">
+                                <p><strong>Languages:</strong> English, Mandarin</p>
+                                <p><strong>Education:</strong> Johns Hopkins University</p>
+                            </div>
+                            <div class="doctor-schedule">
+                                <a href="contact.html" class="btn btn-outline">Schedule Appointment</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="specialty-section" id="neurology-section">
+                <h3>Neurology</h3>
+                <div class="doctors-grid">
+                    <div class="doctor-card">
+                        <div class="doctor-image placeholder-image">
+                            <svg viewBox="0 0 24 24" width="64" height="64" stroke="currentColor" stroke-width="2" fill="none">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                        </div>
+                        <div class="doctor-info">
+                            <h4>Dr. Michael Rodriguez</h4>
+                            <p class="doctor-specialty">Neurologist</p>
+                            <p class="doctor-credentials">MD, FAAN</p>
+                            <p class="doctor-bio">Dr. Rodriguez is a highly skilled neurologist with extensive experience in treating neurological disorders. He specializes in stroke management, movement disorders, and neuromuscular diseases.</p>
+                            <div class="doctor-details">
+                                <p><strong>Languages:</strong> English, Spanish</p>
+                                <p><strong>Education:</strong> Mayo Clinic School of Medicine</p>
+                            </div>
+                            <div class="doctor-schedule">
+                                <a href="contact.html" class="btn btn-outline">Schedule Appointment</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="doctor-card">
+                        <div class="doctor-image placeholder-image">
+                            <svg viewBox="0 0 24 24" width="64" height="64" stroke="currentColor" stroke-width="2" fill="none">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                        </div>
+                        <div class="doctor-info">
+                            <h4>Dr. Emily Thompson</h4>
+                            <p class="doctor-specialty">Neurologist</p>
+                            <p class="doctor-credentials">MD</p>
+                            <p class="doctor-bio">Dr. Thompson specializes in headache disorders, epilepsy, and cognitive neurology. She is dedicated to providing comprehensive care for patients with neurological conditions.</p>
+                            <div class="doctor-details">
+                                <p><strong>Languages:</strong> English</p>
+                                <p><strong>Education:</strong> University of Pennsylvania</p>
+                            </div>
+                            <div class="doctor-schedule">
+                                <a href="contact.html" class="btn btn-outline">Schedule Appointment</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="specialty-section" id="orthopedics-section">
+                <h3>Orthopedics</h3>
+                <div class="doctors-grid">
+                    <div class="doctor-card">
+                        <div class="doctor-image placeholder-image">
+                            <svg viewBox="0 0 24 24" width="64" height="64" stroke="currentColor" stroke-width="2" fill="none">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                        </div>
+                        <div class="doctor-info">
+                            <h4>Dr. Robert Wilson</h4>
+                            <p class="doctor-specialty">Orthopedic Surgeon</p>
+                            <p class="doctor-credentials">MD, FAAOS</p>
+                            <p class="doctor-bio">Dr. Wilson is a board-certified orthopedic surgeon specializing in joint replacement surgery. He has performed over 1,000 successful joint replacements and is committed to helping patients regain mobility and reduce pain.</p>
+                            <div class="doctor-details">
+                                <p><strong>Languages:</strong> English</p>
+                                <p><strong>Education:</strong> Stanford University School of Medicine</p>
+                            </div>
+                            <div class="doctor-schedule">
+                                <a href="contact.html" class="btn btn-outline">Schedule Appointment</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="doctor-card">
+                        <div class="doctor-image placeholder-image">
+                            <svg viewBox="0 0 24 24" width="64" height="64" stroke="currentColor" stroke-width="2" fill="none">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                        </div>
+                        <div class="doctor-info">
+                            <h4>Dr. Jessica Patel</h4>
+                            <p class="doctor-specialty">Sports Medicine Specialist</p>
+                            <p class="doctor-credentials">MD</p>
+                            <p class="doctor-bio">Dr. Patel specializes in sports medicine, helping athletes of all levels recover from injuries and optimize performance. She has experience working with professional sports teams and Olympic athletes.</p>
+                            <div class="doctor-details">
+                                <p><strong>Languages:</strong> English, Hindi</p>
+                                <p><strong>Education:</strong> University of California, Los Angeles</p>
+                            </div>
+                            <div class="doctor-schedule">
+                                <a href="contact.html" class="btn btn-outline">Schedule Appointment</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="specialty-section" id="pediatrics-section">
+                <h3>Pediatrics</h3>
+                <div class="doctors-grid">
+                    <div class="doctor-card">
+                        <div class="doctor-image placeholder-image">
+                            <svg viewBox="0 0 24 24" width="64" height="64" stroke="currentColor" stroke-width="2" fill="none">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                        </div>
+                        <div class="doctor-info">
+                            <h4>Dr. Lisa Morgan</h4>
+                            <p class="doctor-specialty">Pediatrician</p>
+                            <p class="doctor-credentials">MD, FAAP</p>
+                            <p class="doctor-bio">Dr. Morgan is a caring and compassionate pediatrician with over 10 years of experience in providing healthcare for children from newborns to adolescents. She emphasizes preventive care and healthy development.</p>
+                            <div class="doctor-details">
+                                <p><strong>Languages:</strong> English</p>
+                                <p><strong>Education:</strong> Columbia University College of Physicians and Surgeons</p>
+                            </div>
+                            <div class="doctor-schedule">
+                                <a href="contact.html" class="btn btn-outline">Schedule Appointment</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="doctor-card">
+                        <div class="doctor-image placeholder-image">
+                            <svg viewBox="0 0 24 24" width="64" height="64" stroke="currentColor" stroke-width="2" fill="none">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                        </div>
+                        <div class="doctor-info">
+                            <h4>Dr. James Kim</h4>
+                            <p class="doctor-specialty">Pediatric Cardiologist</p>
+                            <p class="doctor-credentials">MD</p>
+                            <p class="doctor-bio">Dr. Kim specializes in diagnosing and treating heart conditions in children. He is experienced in managing congenital heart defects and acquired heart diseases in pediatric patients.</p>
+                            <div class="doctor-details">
+                                <p><strong>Languages:</strong> English, Korean</p>
+                                <p><strong>Education:</strong> University of Michigan Medical School</p>
+                            </div>
+                            <div class="doctor-schedule">
+                                <a href="contact.html" class="btn btn-outline">Schedule Appointment</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="specialty-section" id="oncology-section">
+                <h3>Oncology</h3>
+                <div class="doctors-grid">
+                    <div class="doctor-card">
+                        <div class="doctor-image placeholder-image">
+                            <svg viewBox="0 0 24 24" width="64" height="64" stroke="currentColor" stroke-width="2" fill="none">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                        </div>
+                        <div class="doctor-info">
+                            <h4>Dr. David Johnson</h4>
+                            <p class="doctor-specialty">Medical Oncologist</p>
+                            <p class="doctor-credentials">MD, PhD</p>
+                            <p class="doctor-bio">Dr. Johnson is a dedicated oncologist with extensive experience in treating various types of cancer. He specializes in developing personalized treatment plans combining chemotherapy, immunotherapy, and targeted therapies.</p>
+                            <div class="doctor-details">
+                                <p><strong>Languages:</strong> English</p>
+                                <p><strong>Education:</strong> Yale School of Medicine</p>
+                            </div>
+                            <div class="doctor-schedule">
+                                <a href="contact.html" class="btn btn-outline">Schedule Appointment</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="doctor-card">
+                        <div class="doctor-image placeholder-image">
+                            <svg viewBox="0 0 24 24" width="64" height="64" stroke="currentColor" stroke-width="2" fill="none">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                        </div>
+                        <div class="doctor-info">
+                            <h4>Dr. Olivia Martinez</h4>
+                            <p class="doctor-specialty">Radiation Oncologist</p>
+                            <p class="doctor-credentials">MD</p>
+                            <p class="doctor-bio">Dr. Martinez specializes in radiation oncology, using advanced technologies to deliver precise radiation therapy for cancer treatment. She works closely with a multidisciplinary team to provide comprehensive cancer care.</p>
+                            <div class="doctor-details">
+                                <p><strong>Languages:</strong> English, Spanish</p>
+                                <p><strong>Education:</strong> Duke University School of Medicine</p>
+                            </div>
+                            <div class="doctor-schedule">
+                                <a href="contact.html" class="btn btn-outline">Schedule Appointment</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="specialty-section" id="gynecology-section">
+                <h3>Obstetrics & Gynecology</h3>
+                <div class="doctors-grid">
+                    <div class="doctor-card">
+                        <div class="doctor-image placeholder-image">
+                            <svg viewBox="0 0 24 24" width="64" height="64" stroke="currentColor" stroke-width="2" fill="none">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                        </div>
+                        <div class="doctor-info">
+                            <h4>Dr. Rebecca Lewis</h4>
+                            <p class="doctor-specialty">OB/GYN</p>
+                            <p class="doctor-credentials">MD, FACOG</p>
+                            <p class="doctor-bio">Dr. Lewis is a board-certified obstetrician and gynecologist with a passion for women's health. She provides comprehensive care for women at all stages of life, from adolescence through menopause.</p>
+                            <div class="doctor-details">
+                                <p><strong>Languages:</strong> English</p>
+                                <p><strong>Education:</strong> Emory University School of Medicine</p>
+                            </div>
+                            <div class="doctor-schedule">
+                                <a href="contact.html" class="btn btn-outline">Schedule Appointment</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="doctor-card">
+                        <div class="doctor-image placeholder-image">
+                            <svg viewBox="0 0 24 24" width="64" height="64" stroke="currentColor" stroke-width="2" fill="none">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                        </div>
+                        <div class="doctor-info">
+                            <h4>Dr. Thomas Clark</h4>
+                            <p class="doctor-specialty">Maternal-Fetal Medicine Specialist</p>
+                            <p class="doctor-credentials">MD</p>
+                            <p class="doctor-bio">Dr. Clark specializes in high-risk pregnancies and fetal medicine. He provides expert care for mothers and babies facing complex pregnancy conditions, using advanced diagnostic and treatment approaches.</p>
+                            <div class="doctor-details">
+                                <p><strong>Languages:</strong> English, French</p>
+                                <p><strong>Education:</strong> Washington University School of Medicine</p>
+                            </div>
+                            <div class="doctor-schedule">
+                                <a href="contact.html" class="btn btn-outline">Schedule Appointment</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Looking for a Specialist?</h2>
+                <p>Contact us to schedule an appointment with one of our expert doctors</p>
+                <a href="contact.html" class="btn btn-primary">Schedule an Appointment</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <div class="footer-logo">
+                        <img src="assets/logo.svg" alt="MediCare Hospital Logo">
+                        <span>MediCare Hospital</span>
+                    </div>
+                    <p>Providing quality healthcare services since 1995.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="doctors.html">Our Doctors</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li>
+                            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            <span>123 Medical Center Drive, Healthcare City</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                            <span>(123) 456-7890</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                            <span>info@medicarehospital.com</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-hours">
+                    <h3>Working Hours</h3>
+                    <ul>
+                        <li><span>Emergency:</span> 24/7</li>
+                        <li><span>Regular Outpatient:</span> Mon-Fri 8:00AM - 8:00PM</li>
+                        <li><span>Weekend Outpatient:</span> Sat-Sun 10:00AM - 4:00PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 MediCare Hospital. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

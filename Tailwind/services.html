@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediCare Hospital - Quality Healthcare For All</title>
+    <meta name="description" content="MediCare Hospital provides comprehensive healthcare services with state-of-the-art facilities and experienced medical professionals.">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#1a73e8",
+                        "primary-dark": "#0d47a1",
+                        "primary-light": "#e8f0fe",
+                        secondary: "#34a853",
+                        accent: "#fbbc04",
+                        danger: "#ea4335",
+                        "text-dark": "#202124",
+                        "text-medium": "#5f6368",
+                        "text-light": "#80868b",
+                        "background-light": "#f8f9fa",
+                        "background-white": "#ffffff",
+                        "background-dark": "#202124",
+                        "border-color": "#dadce0"
+                    },
+                    spacing: {
+                        'xs': '4px',
+                        'sm': '8px',
+                        'md': '16px',
+                        'lg': '24px',
+                        'xl': '32px',
+                        'xxl': '48px'
+                    },
+                    borderRadius: {
+                        'sm': '4px',
+                        'md': '8px',
+                        'lg': '12px'
+                    },
+                    boxShadow: {
+                        'sm': '0 1px 2px rgba(60, 64, 67, 0.1)',
+                        'md': '0 2px 4px rgba(60, 64, 67, 0.1)',
+                        'lg': '0 4px 8px rgba(60, 64, 67, 0.1)'
+                    },
+                    fontFamily: {
+                        'sans': ['Roboto', 'Arial', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* Basic styles that are not easy to do directly with Tailwind utility classes */
+        .mobile-menu-toggle span:nth-child(1) {
+            transform: translateY(-6px);
+        }
+        .mobile-menu-toggle span:nth-child(3) {
+            transform: translateY(6px);
+        }
+        
+        .mobile-menu-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translateY(0);
+        }
+        .mobile-menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+        .mobile-menu-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translateY(0);
+        }
+    </style>
+</head>
+<body class="font-sans text-text-dark bg-background-white">
+    <header class="bg-background-white shadow-md sticky top-0 z-50 py-md">
+        <div class="w-[90%] max-w-[1200px] mx-auto px-md flex justify-between items-center">
+            <div class="logo">
+                <a href="index.html" class="flex items-center text-text-dark">
+                    <img src="assets/logo.svg" alt="MediCare Hospital Logo" class="w-10 h-10 mr-sm">
+                    <span class="text-2xl font-bold text-primary">MediCare</span>
+                </a>
+            </div>
+            <nav id="main-nav">
+                <button class="mobile-menu-toggle relative w-[30px] h-[30px] border-none bg-transparent cursor-pointer md:hidden" id="menu-toggle">
+                    <span class="block absolute h-[3px] w-full bg-text-dark rounded-sm transition-all duration-300"></span>
+                    <span class="block absolute h-[3px] w-full bg-text-dark rounded-sm transition-all duration-300"></span>
+                    <span class="block absolute h-[3px] w-full bg-text-dark rounded-sm transition-all duration-300"></span>
+                </button>
+                <ul class="nav-list hidden md:flex">
+                    <li class="md:mx-md"><a href="index.html" class="font-medium py-sm relative text-text-dark hover:text-primary">Home</a></li>
+                    <li class="md:mx-md"><a href="services.html" class="font-medium py-sm relative text-primary after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2px] after:bg-primary">Services</a></li>
+                    <li class="md:mx-md"><a href="doctors.html" class="font-medium py-sm relative text-text-dark hover:text-primary">Our Doctors</a></li>
+                    <li class="md:mx-md"><a href="about.html" class="font-medium py-sm relative text-text-dark hover:text-primary">About Us</a></li>
+                    <li class="md:mx-md"><a href="contact.html" class="font-medium py-sm relative text-text-dark hover:text-primary">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="bg-primary-light py-xxl text-center">
+        <div class="w-[90%] max-w-[1200px] mx-auto px-md">
+            <h1 class="text-5xl md:text-4xl sm:text-3xl mb-sm text-primary-dark">Our Services</h1>
+            <p class="text-xl md:text-lg sm:text-base text-text-medium max-w-[700px] mx-auto">Comprehensive healthcare solutions to address your medical needs with expertise and compassion</p>
+        </div>
+    </section>
+
+    <section class="py-xxl">
+        <div class="w-[90%] max-w-[1200px] mx-auto px-md">
+            <div class="max-w-[1000px] mx-auto">
+                <div class="flex justify-center flex-wrap mb-xl border-b border-border-color" id="category-tabs">
+                    <button class="px-lg py-md font-semibold text-primary relative after:content-[''] after:absolute after:bottom-[-1px] after:left-0 after:w-full after:h-[3px] after:bg-primary category-tab active" data-category="cardiology">Cardiology</button>
+                    <button class="px-lg py-md font-semibold text-text-medium hover:text-primary transition-all duration-300 category-tab" data-category="orthopedics">Orthopedics</button>
+                    <button class="px-lg py-md font-semibold text-text-medium hover:text-primary transition-all duration-300 category-tab" data-category="pediatrics">Pediatrics</button>
+                    <button class="px-lg py-md font-semibold text-text-medium hover:text-primary transition-all duration-300 category-tab" data-category="neurology">Neurology</button>
+                    <button class="px-lg py-md font-semibold text-text-medium hover:text-primary transition-all duration-300 category-tab" data-category="diagnostics">Diagnostics</button>
+                </div>
+
+                <div id="cardiology" class="category-content active">
+                    <h3 class="text-3xl text-center mb-lg text-primary-dark">Cardiology Services</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-xl">
+                        <div class="flex bg-background-light rounded-md overflow-hidden transition-all duration-300 hover:shadow-md">
+                            <div class="flex-none w-[100px] flex justify-center items-center bg-primary-light text-primary">
+                                <svg viewBox="0 0 24 24" width="48" height="48" stroke="currentColor" stroke-width="2" fill="none">
+                                    <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                                </svg>
+                            </div>
+                            <div class="flex-1 p-lg">
+                                <h4 class="text-xl mb-sm text-text-dark">Cardiac Consultation</h4>
+                                <p class="text-text-medium mb-md">Comprehensive evaluation by our experienced cardiologists to assess heart health and provide personalized treatment plans.</p>
+                                <ul class="list-disc pl-xl text-text-medium">
+                                    <li class="mb-xs">Thorough medical history review</li>
+                                    <li class="mb-xs">Physical examination</li>
+                                    <li class="mb-xs">Risk assessment for heart disease</li>
+                                    <li class="mb-xs">Treatment recommendations</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="flex bg-background-light rounded-md overflow-hidden transition-all duration-300 hover:shadow-md">
+                            <div class="flex-none w-[100px] flex justify-center items-center bg-primary-light text-primary">
+                                <svg viewBox="0 0 24 24" width="48" height="48" stroke="currentColor" stroke-width="2" fill="none">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <line x1="12" y1="8" x2="12" y2="12"></line>
+                                    <line x1="12" y1="16" x2="12" y2="16"></line>
+                                </svg>
+                            </div>
+                            <div class="flex-1 p-lg">
+                                <h4 class="text-xl mb-sm text-text-dark">Echocardiography</h4>
+                                <p class="text-text-medium mb-md">Non-invasive ultrasound procedure to evaluate heart structure and function by creating detailed images.</p>
+                                <ul class="list-disc pl-xl text-text-medium">
+                                    <li class="mb-xs">Assesses heart chambers and valves</li>
+                                    <li class="mb-xs">Evaluates pumping function</li>
+                                    <li class="mb-xs">Detects abnormalities</li>
+                                    <li class="mb-xs">Monitors treatment progress</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="flex bg-background-light rounded-md overflow-hidden transition-all duration-300 hover:shadow-md">
+                            <div class="flex-none w-[100px] flex justify-center items-center bg-primary-light text-primary">
+                                <svg viewBox="0 0 24 24" width="48" height="48" stroke="currentColor" stroke-width="2" fill="none">
+                                    <path d="M2 12h6"></path>
+                                    <path d="M16 12h6"></path>
+                                    <path d="M8 18L12 12 16 18"></path>
+                                    <path d="M8 6L12 12 16 6"></path>
+                                </svg>
+                            </div>
+                            <div class="flex-1 p-lg">
+                                <h4 class="text-xl mb-sm text-text-dark">Electrocardiogram (ECG)</h4>
+                                <p class="text-text-medium mb-md">Records electrical activity of the heart to detect irregular heartbeats, heart attacks, and other cardiac issues.</p>
+                                <ul class="list-disc pl-xl text-text-medium">
+                                    <li class="mb-xs">Quick and painless procedure</li>
+                                    <li class="mb-xs">Detects arrhythmias</li>
+                                    <li class="mb-xs">Identifies signs of heart damage</li>
+                                    <li class="mb-xs">Monitors pacemaker function</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="flex bg-background-light rounded-md overflow-hidden transition-all duration-300 hover:shadow-md">
+                            <div class="flex-none w-[100px] flex justify-center items-center bg-primary-light text-primary">
+                                <svg viewBox="0 0 24 24" width="48" height="48" stroke="currentColor" stroke-width="2" fill="none">
+                                    <path d="M18 20V10"></path>
+                                    <path d="M12 20V4"></path>
+                                    <path d="M6 20v-6"></path>
+                                </svg>
+                            </div>
+                            <div class="flex-1 p-lg">
+                                <h4 class="text-xl mb-sm text-text-dark">Cardiac Rehabilitation</h4>
+                                <p class="text-text-medium mb-md">Supervised program to help patients recover from heart attacks, surgery, and other cardiac conditions.</p>
+                                <ul class="list-disc pl-xl text-text-medium">
+                                    <li class="mb-xs">Exercise training</li>
+                                    <li class="mb-xs">Education on heart-healthy living</li>
+                                    <li class="mb-xs">Stress reduction techniques</li>
+                                    <li class="mb-xs">Nutritional counseling</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="orthopedics" class="category-content hidden">
+                    <h3 class="text-3xl text-center mb-lg text-primary-dark">Orthopedic Services</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-xl">
+                        <div class="flex bg-background-light rounded-md overflow-hidden transition-all duration-300 hover:shadow-md">
+                            <div class="flex-none w-[100px] flex justify-center items-center bg-primary-light text-primary">
+                                <svg viewBox="0 0 24 24" width="48" height="48" stroke="currentColor" stroke-width="2" fill="none">
+                                    <line x1="12" y1="2" x2="12" y2="6"></line>
+                                    <line x1="12" y1="18" x2="12" y2="22"></line>
+                                    <line x1="4.93" y1="4.93" x2="7.76" y2="7.76"></line>
+                                    <line x1="16.24" y1="16.24" x2="19.07" y2="19.07"></line>
+                                    <line x1="2" y1="12" x2="6" y2="12"></line>
+                                    <line x1="18" y1="12" x2="22" y2="12"></line>
+                                    <line x1="4.93" y1="19.07" x2="7.76" y2="16.24"></line>
+                                    <line x1="16.24" y1="7.76" x2="19.07" y2="4.93"></line>
+                                </svg>
+                            </div>
+                            <div class="flex-1 p-lg">
+                                <h4 class="text-xl mb-sm text-text-dark">Joint Replacement</h4>
+                                <p class="text-text-medium mb-md">Surgical procedures to replace damaged joints with artificial implants to restore function and reduce pain.</p>
+                                <ul class="list-disc pl-xl text-text-medium">
+                                    <li class="mb-xs">Hip replacement</li>
+                                    <li class="mb-xs">Knee replacement</li>
+                                    <li class="mb-xs">Shoulder replacement</li>
+                                    <li class="mb-xs">Minimally invasive options</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="flex bg-background-light rounded-md overflow-hidden transition-all duration-300 hover:shadow-md">
+                            <div class="flex-none w-[100px] flex justify-center items-center bg-primary-light text-primary">
+                                <svg viewBox="0 0 24 24" width="48" height="48" stroke="currentColor" stroke-width="2" fill="none">
+                                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                                </svg>
+                            </div>
+                            <div class="flex-1 p-lg">
+                                <h4 class="text-xl mb-sm text-text-dark">Sports Medicine</h4>
+                                <p class="text-text-medium mb-md">Specialized care for athletes and active individuals to treat injuries and improve performance.</p>
+                                <ul class="list-disc pl-xl text-text-medium">
+                                    <li class="mb-xs">Injury diagnosis and treatment</li>
+                                    <li class="mb-xs">Rehabilitation programs</li>
+                                    <li class="mb-xs">Performance enhancement</li>
+                                    <li class="mb-xs">Injury prevention strategies</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="flex bg-background-light rounded-md overflow-hidden transition-all duration-300 hover:shadow-md">
+                            <div class="flex-none w-[100px] flex justify-center items-center bg-primary-light text-primary">
+                                <svg viewBox="0 0 24 24" width="48" height="48" stroke="currentColor" stroke-width="2" fill="none">
+                                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                                    <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                                </svg>
+                            </div>
+                            <div class="flex-1 p-lg">
+                                <h4 class="text-xl mb-sm text-text-dark">Spine Care</h4>
+                                <p class="text-text-medium mb-md">Comprehensive treatment for spine conditions, from conservative care to surgical interventions.</p>
+                                <ul class="list-disc pl-xl text-text-medium">
+                                    <li class="mb-xs">Herniated disc treatment</li>
+                                    <li class="mb-xs">Spinal fusion</li>
+                                    <li class="mb-xs">Scoliosis management</li>
+                                    <li class="mb-xs">Pain management</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="flex bg-background-light rounded-md overflow-hidden transition-all duration-300 hover:shadow-md">
+                            <div class="flex-none w-[100px] flex justify-center items-center bg-primary-light text-primary">
+                                <svg viewBox="0 0 24 24" width="48" height="48" stroke="currentColor" stroke-width="2" fill="none">
+                                    <polyline points="4 7 4 4 20 4 20 7"></polyline>
+                                    <line x1="9" y1="20" x2="15" y2="20"></line>
+                                    <line x1="12" y1="4" x2="12" y2="20"></line>
+                                </svg>
+                            </div>
+                            <div class="flex-1 p-lg">
+                                <h4 class="text-xl mb-sm text-text-dark">Fracture Care</h4>
+                                <p class="text-text-medium mb-md">Expert management of bone fractures using the latest techniques for optimal healing and recovery.</p>
+                                <ul class="list-disc pl-xl text-text-medium">
+                                    <li class="mb-xs">Cast application</li>
+                                    <li class="mb-xs">Surgical fixation</li>
+                                    <li class="mb-xs">Rehabilitation therapy</li>
+                                    <li class="mb-xs">Long-term follow-up care</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="pediatrics" class="category-content hidden">
+                    <h3 class="text-3xl text-center mb-lg text-primary-dark">Pediatric Services</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-xl">
+                        <div class="flex bg-background-light rounded-md overflow-hidden transition-all duration-300 hover:shadow-md">
+                            <div class="flex-none w-[100px] flex justify-center items-center bg-primary-light text-primary">
+                                <svg viewBox="0 0 24 24" width="48" height="48" stroke="currentColor" stroke-width="2" fill="none">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                    <circle cx="12" cy="12" r="3"></circle>
+                                </svg>
+                            </div>
+                            <div class="flex-1 p-lg">
+                                <h4 class="text-xl mb-sm text-text-dark">Well-Child Visits</h4>
+                                <p class="text-text-medium mb-md">Regular check-ups to monitor growth, development, and overall health from infancy through adolescence.</p>
+                                <ul class="list-disc pl-xl text-text-medium">
+                                    <li class="mb-xs">Growth and development monitoring</li>
+                                    <li class="mb-xs">Immunizations</li>
+                                    <li class="mb-xs">Nutrition guidance</li>
+                                    <li class="mb-xs">Behavioral assessment</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="flex bg-background-light rounded-md overflow-hidden transition-all duration-300 hover:shadow-md">
+                            <div class="flex-none w-[100px] flex justify-center items-center bg-primary-light text-primary">
+                                <svg viewBox="0 0 24 24" width="48" height="48" stroke="currentColor" stroke-width="2" fill="none">
+                                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                                </svg>
+                            </div>
+                            <div class="flex-1 p-lg">
+                                <h4 class="text-xl mb-sm text-text-dark">Pediatric Specialty Care</h4>
+                                <p class="text-text-medium mb-md">Specialized medical care for children with chronic conditions or complex health issues.</p>
+                                <ul class="list-disc pl-xl text-text-medium">
+                                    <li class="mb-xs">Asthma and allergy management</li>
+                                    <li class="mb-xs">Diabetes care</li>
+                                    <li class="mb-xs">Developmental disorders</li>
+                                    <li class="mb-xs">Congenital conditions</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="flex bg-background-light rounded-md overflow-hidden transition-all duration-300 hover:shadow-md">
+                            <div class="flex-none w-[100px] flex justify-center items-center bg-primary-light text-primary">
+                                <svg viewBox="0 0 24 24" width="48" height="48" stroke="currentColor" stroke-width="2" fill="none">
+                                    <path d="M8 3v3a2 2 0 0 1-2 2H3m18 0h-3a2 2 0 0 1-2-2V3m0 18v-3a2 2 0 0 1 2-2h3M3 16h3a2 2 0 0 1 2 2v3"></path>
+                                </svg>
+                            </div>
+                            <div class="flex-1 p-lg">
+                                <h4 class="text-xl mb-sm text-text-dark">Childhood Vaccinations</h4>
+                                <p class="text-text-medium mb-md">Comprehensive immunization services following recommended schedules to protect against preventable diseases.</p>
+                                <ul class="list-disc pl-xl text-text-medium">
+                                    <li class="mb-xs">Routine childhood vaccines</li>
+                                    <li class="mb-xs">Catch-up immunizations</li>
+                                    <li class="mb-xs">Travel vaccines</li>
+                                    <li class="mb-xs">Vaccine education</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="flex bg-background-light rounded-md overflow-hidden transition-all duration-300 hover:shadow-md">
+                            <div class="flex-none w-[100px] flex justify-center items-center bg-primary-light text-primary">
+                                <svg viewBox="0 0 24 24" width="48" height="48" stroke="currentColor" stroke-width="2" fill="none">
+                                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                                </svg>
+                            </div>
+                            <div class="flex-1 p-lg">
+                                <h4 class="text-xl mb-sm text-text-dark">Pediatric Emergency Care</h4>
+                                <p class="text-text-medium mb-md">Immediate care for children facing urgent medical situations in a child-friendly environment.</p>
+                                <ul class="list-disc pl-xl text-text-medium">
+                                    <li class="mb-xs">Specialized pediatric emergency team</li>
+                                    <li class="mb-xs">Child-sized equipment</li>
+                                    <li class="mb-xs">Family-centered care approach</li>
+                                    <li class="mb-xs">24/7 availability</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="neurology" class="category-content hidden">
+                    <h3 class="text-3xl text-center mb-lg text-primary-dark">Neurology Services</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-xl">
+                        <!-- Neurology services content would go here -->
+                    </div>
+                </div>
+
+                <div id="diagnostics" class="category-content hidden">
+                    <h3 class="text-3xl text-center mb-lg text-primary-dark">Diagnostic Services</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-xl">
+                        <!-- Diagnostic services content would go here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-xxl bg-primary text-background-white">
+        <div class="w-[90%] max-w-[1200px] mx-auto px-md">
+            <div class="text-center">
+                <h2 class="text-4xl md:text-3xl sm:text-2xl mb-sm">Need Specialized Medical Care?</h2>
+                <p class="mb-lg text-lg sm:text-base">Our team of healthcare professionals is ready to help you</p>
+                <a href="contact.html" class="inline-block px-6 py-3 rounded-md bg-white text-primary font-semibold transition-all hover:bg-primary-light">Schedule an Appointment</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-background-dark text-background-white pt-xxl">
+        <div class="w-[90%] max-w-[1200px] mx-auto px-md">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-xl mb-xl">
+                <div>
+                    <div class="flex items-center mb-md">
+                        <img src="assets/logo.svg" alt="MediCare Hospital Logo" class="w-10 h-10 mr-sm">
+                        <span class="text-xl font-bold text-background-white">MediCare Hospital</span>
+                    </div>
+                    <p class="text-text-light mb-md">Providing quality healthcare services since 1995.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl mb-lg relative after:content-[''] after:absolute after:left-0 after:bottom-[-8px] after:w-10 after:h-0.5 after:bg-primary">Quick Links</h3>
+                    <ul>
+                        <li class="mb-sm"><a href="index.html" class="text-text-light transition-all duration-300 hover:text-primary-light hover:ml-xs block">Home</a></li>
+                        <li class="mb-sm"><a href="services.html" class="text-text-light transition-all duration-300 hover:text-primary-light hover:ml-xs block">Services</a></li>
+                        <li class="mb-sm"><a href="doctors.html" class="text-text-light transition-all duration-300 hover:text-primary-light hover:ml-xs block">Our Doctors</a></li>
+                        <li class="mb-sm"><a href="about.html" class="text-text-light transition-all duration-300 hover:text-primary-light hover:ml-xs block">About Us</a></li>
+                        <li class="mb-sm"><a href="contact.html" class="text-text-light transition-all duration-300 hover:text-primary-light hover:ml-xs block">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl mb-lg relative after:content-[''] after:absolute after:left-0 after:bottom-[-8px] after:w-10 after:h-0.5 after:bg-primary">Contact Us</h3>
+                    <ul>
+                        <li class="flex items-start mb-md text-text-light">
+                            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" class="text-primary mr-sm flex-shrink-0" stroke-width="2" fill="none">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            <span>123 Medical Center Drive, Healthcare City</span>
+                        </li>
+                        <li class="flex items-start mb-md text-text-light">
+                            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" class="text-primary mr-sm flex-shrink-0" stroke-width="2" fill="none">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                            <span>(123) 456-7890</span>
+                        </li>
+                        <li class="flex items-start mb-md text-text-light">
+                            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" class="text-primary mr-sm flex-shrink-0" stroke-width="2" fill="none">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                            <span>info@medicarehospital.com</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl mb-lg relative after:content-[''] after:absolute after:left-0 after:bottom-[-8px] after:w-10 after:h-0.5 after:bg-primary">Working Hours</h3>
+                    <ul>
+                        <li class="mb-md text-text-light"><span class="font-semibold text-background-white mr-sm">Emergency:</span> 24/7</li>
+                        <li class="mb-md text-text-light"><span class="font-semibold text-background-white mr-sm">Regular Outpatient:</span> Mon-Fri 8:00AM - 8:00PM</li>
+                        <li class="mb-md text-text-light"><span class="font-semibold text-background-white mr-sm">Weekend Outpatient:</span> Sat-Sun 10:00AM - 4:00PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-opacity-10 border-white py-lg text-center">
+                <p class="text-text-light text-sm">&copy; 2023 MediCare Hospital. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+        // Mobile Menu Toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.getElementById('menu-toggle');
+            const navList = document.querySelector('.nav-list');
+            
+            menuToggle.addEventListener('click', function() {
+                this.classList.toggle('active');
+                navList.classList.toggle('hidden');
+                navList.classList.toggle('flex');
+                navList.classList.toggle('flex-col');
+            });
+
+            // Category Tabs
+            const tabs = document.querySelectorAll('.category-tab');
+            const contents = document.querySelectorAll('.category-content');
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    const category = tab.getAttribute('data-category');
+                    
+                    // Remove active class from all tabs
+                    tabs.forEach(t => {
+                        t.classList.remove('text-primary', 'after:content-[\'\']', 'after:absolute', 'after:bottom-[-1px]', 'after:left-0', 'after:w-full', 'after:h-[3px]', 'after:bg-primary');
+                        t.classList.add('text-text-medium');
+                    });
+                    
+                    // Add active class to clicked tab
+                    tab.classList.remove('text-text-medium');
+                    tab.classList.add('text-primary', 'after:content-[\'\']', 'after:absolute', 'after:bottom-[-1px]', 'after:left-0', 'after:w-full', 'after:h-[3px]', 'after:bg-primary');
+                    
+                    // Hide all content
+                    contents.forEach(c => {
+                        c.classList.add('hidden');
+                        c.classList.remove('active');
+                    });
+                    
+                    // Show selected content
+                    const content = document.getElementById(category);
+                    content.classList.remove('hidden');
+                    content.classList.add('active');
+                });
+            });
+        });
+</body>
+</html>
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - MediCare Hospital</title>
+    <meta name="description" content="Explore the comprehensive medical services offered by MediCare Hospital, from emergency care to specialized treatments.">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/logo.svg" alt="MediCare Hospital Logo">
+                    <span>MediCare</span>
+                </a>
+            </div>
+            <nav id="main-nav">
+                <button class="mobile-menu-toggle" id="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html" class="active">Services</a></li>
+                    <li><a href="doctors.html">Our Doctors</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Our Medical Services</h1>
+            <p>Comprehensive healthcare solutions for all your needs</p>
+        </div>
+    </section>
+
+    <section class="services-overview">
+        <div class="container">
+            <div class="section-title">
+                <h2>Comprehensive Healthcare</h2>
+                <p>MediCare Hospital offers a wide range of medical services delivered by experienced healthcare professionals using state-of-the-art technology.</p>
+            </div>
+            
+            <div class="service-categories">
+                <div class="category-tabs">
+                    <button class="category-tab active" data-target="specialty-care">Specialty Care</button>
+                    <button class="category-tab" data-target="diagnostic">Diagnostic Services</button>
+                    <button class="category-tab" data-target="preventive">Preventive Care</button>
+                    <button class="category-tab" data-target="emergency">Emergency Services</button>
+                </div>
+                
+                <div class="category-content active" id="specialty-care">
+                    <h3>Specialty Care Services</h3>
+                    <p>Our hospital offers specialized medical services across various departments, each staffed with expert physicians and healthcare professionals.</p>
+                    <div class="services-grid">
+                        <div class="service-detailed" id="cardiology">
+                            <div class="service-icon">
+                                <svg viewBox="0 0 24 24" width="48" height="48" stroke="currentColor" stroke-width="2" fill="none">
+                                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                                </svg>
+                            </div>
+                            <div class="service-info">
+                                <h4>Cardiology</h4>
+                                <p>Comprehensive care for heart conditions including diagnostic tests, interventional procedures, and rehabilitation services. Our cardiologists specialize in treating various heart diseases including coronary artery disease, heart failure, arrhythmias, and valvular heart disease.</p>
+                                <ul class="service-features">
+                                    <li>Echocardiography</li>
+                                    <li>Cardiac Catheterization</li>
+                                    <li>Electrocardiogram (ECG)</li>
+                                    <li>Holter Monitoring</li>
+                                    <li>Cardiac Rehabilitation</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="service-detailed" id="orthopedics">
+                            <div class="service-icon">
+                                <svg viewBox="0 0 24 24" width="48" height="48" stroke="currentColor" stroke-width="2" fill="none">
+                                    <line x1="12" y1="2" x2="12" y2="6"></line>
+                                    <line x1="12" y1="18" x2="12" y2="22"></line>
+                                    <line x1="4.93" y1="4.93" x2="7.76" y2="7.76"></line>
+                                    <line x1="16.24" y1="16.24" x2="19.07" y2="19.07"></line>
+                                    <line x1="2" y1="12" x2="6" y2="12"></line>
+                                    <line x1="18" y1="12" x2="22" y2="12"></line>
+                                    <line x1="4.93" y1="19.07" x2="7.76" y2="16.24"></line>
+                                    <line x1="16.24" y1="7.76" x2="19.07" y2="4.93"></line>
+                                </svg>
+                            </div>
+                            <div class="service-info">
+                                <h4>Orthopedics</h4>
+                                <p>Our orthopedic department offers comprehensive care for musculoskeletal conditions affecting bones, joints, muscles, ligaments, and tendons. We provide both surgical and non-surgical treatments for acute injuries and chronic conditions.</p>
+                                <ul class="service-features">
+                                    <li>Joint Replacement Surgery</li>
+                                    <li>Sports Medicine</li>
+                                    <li>Trauma Care</li>
+                                    <li>Spine Surgery</li>
+                                    <li>Physical Therapy</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="service-detailed" id="pediatrics">
+                            <div class="service-icon">
+                                <svg viewBox="0 0 24 24" width="48" height="48" stroke="currentColor" stroke-width="2" fill="none">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="9" cy="7" r="4"></circle>
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                </svg>
+                            </div>
+                            <div class="service-info">
+                                <h4>Pediatrics</h4>
+                                <p>Our pediatric department provides comprehensive healthcare services for infants, children, and adolescents. Our child-friendly environment and specialized pediatricians ensure the best care for your children's health and development.</p>
+                                <ul class="service-features">
+                                    <li>Well-child Check-ups</li>
+                                    <li>Immunizations</li>
+                                    <li>Treatment for Childhood Illnesses</li>
+                                    <li>Developmental Assessments</li>
+                                    <li>Pediatric Emergency Care</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="service-detailed">
+                            <div class="service-icon">
+                                <svg viewBox="0 0 24 24" width="48" height="48" stroke="currentColor" stroke-width="2" fill="none">
+                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="12" cy="7" r="4"></circle>
+                                </svg>
+                            </div>
+                            <div class="service-info">
+                                <h4>Neurology</h4>
+                                <p>Our neurology department specializes in the diagnosis and treatment of disorders of the nervous system, including the brain, spinal cord, and peripheral nerves. Our neurologists utilize advanced diagnostic technologies to provide precise diagnosis and effective treatment plans.</p>
+                                <ul class="service-features">
+                                    <li>Electroencephalography (EEG)</li>
+                                    <li>Electromyography (EMG)</li>
+                                    <li>Treatment for Headaches and Migraines</li>
+                                    <li>Stroke Management</li>
+                                    <li>Epilepsy Care</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="service-detailed">
+                            <div class="service-icon">
+                                <svg viewBox="0 0 24 24" width="48" height="48" stroke="currentColor" stroke-width="2" fill="none">
+                                    <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                                </svg>
+                            </div>
+                            <div class="service-info">
+                                <h4>Obstetrics & Gynecology</h4>
+                                <p>Our OB/GYN department provides comprehensive care for women at every stage of life. From routine check-ups to specialized treatments, our team of gynecologists and obstetricians ensures high-quality care for women's health needs.</p>
+                                <ul class="service-features">
+                                    <li>Prenatal Care</li>
+                                    <li>Family Planning</li>
+                                    <li>Gynecological Surgery</li>
+                                    <li>Menopause Management</li>
+                                    <li>High-Risk Pregnancy Care</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="service-detailed">
+                            <div class="service-icon">
+                                <svg viewBox="0 0 24 24" width="48" height="48" stroke="currentColor" stroke-width="2" fill="none">
+                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                    <polyline points="14 2 14 8 20 8"></polyline>
+                                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                                    <polyline points="10 9 9 9 8 9"></polyline>
+                                </svg>
+                            </div>
+                            <div class="service-info">
+                                <h4>Oncology</h4>
+                                <p>Our oncology department offers comprehensive cancer care, from early detection to advanced treatment options. Our multidisciplinary team of oncologists works together to provide personalized treatment plans for various types of cancer.</p>
+                                <ul class="service-features">
+                                    <li>Chemotherapy</li>
+                                    <li>Radiation Therapy</li>
+                                    <li>Surgical Oncology</li>
+                                    <li>Cancer Screening Programs</li>
+                                    <li>Supportive Care Services</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="category-content" id="diagnostic">
+                    <h3>Diagnostic Services</h3>
+                    <p>Our hospital is equipped with advanced diagnostic technologies to provide accurate and timely diagnosis for various health conditions.</p>
+                    <div class="services-grid">
+                        <div class="service-detailed">
+                            <div class="service-icon">
+                                <svg viewBox="0 0 24 24" width="48" height="48" stroke="currentColor" stroke-width="2" fill="none">
+                                    <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect>
+                                    <line x1="7" y1="2" x2="7" y2="22"></line>
+                                    <line x1="17" y1="2" x2="17" y2="22"></line>
+                                    <line x1="2" y1="12" x2="22" y2="12"></line>
+                                    <line x1="2" y1="7" x2="7" y2="7"></line>
+                                    <line x1="2" y1="17" x2="7" y2="17"></line>
+                                    <line x1="17" y1="17" x2="22" y2="17"></line>
+                                    <line x1="17" y1="7" x2="22" y2="7"></line>
+                                </svg>
+                            </div>
+                            <div class="service-info">
+                                <h4>Imaging Services</h4>
+                                <p>Our imaging department utilizes state-of-the-art technology to provide detailed images for accurate diagnosis and treatment planning.</p>
+                                <ul class="service-features">
+                                    <li>X-Ray</li>
+                                    <li>Computed Tomography (CT) Scan</li>
+                                    <li>Magnetic Resonance Imaging (MRI)</li>
+                                    <li>Ultrasound</li>
+                                    <li>Mammography</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="service-detailed">
+                            <div class="service-icon">
+                                <svg viewBox="0 0 24 24" width="48" height="48" stroke="currentColor" stroke-width="2" fill="none">
+                                    <path d="M14 11h4"></path>
+                                    <path d="M14 15h4"></path>
+                                    <path d="M6 7h4"></path>
+                                    <path d="M6 11h4"></path>
+                                    <path d="M6 15h4"></path>
+                                    <path d="M9 3v18"></path>
+                                    <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+                                </svg>
+                            </div>
+                            <div class="service-info">
+                                <h4>Laboratory Services</h4>
+                                <p>Our clinical laboratory offers a wide range of diagnostic tests to help in the detection, diagnosis, and monitoring of various health conditions.</p>
+                                <ul class="service-features">
+                                    <li>Blood Tests</li>
+                                    <li>Urine Analysis</li>
+                                    <li>Microbiology</li>
+                                    <li>Histopathology</li>
+                                    <li>Genetic Testing</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="service-detailed">
+                            <div class="service-icon">
+                                <svg viewBox="0 0 24 24" width="48" height="48" stroke="currentColor" stroke-width="2" fill="none">
+                                    <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                                </svg>
+                            </div>
+                            <div class="service-info">
+                                <h4>Specialized Diagnostics</h4>
+                                <p>We offer specialized diagnostic procedures for complex health conditions requiring detailed examination and assessment.</p>
+                                <ul class="service-features">
+                                    <li>Endoscopy</li>
+                                    <li>Colonoscopy</li>
+                                    <li>Bronchoscopy</li>
+                                    <li>Cardiac Stress Tests</li>
+                                    <li>Sleep Studies</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="category-content" id="preventive">
+                    <h3>Preventive Care Services</h3>
+                    <p>Our preventive care services focus on maintaining health, preventing disease, and detecting health issues early when treatment is more effective.</p>
+                    <div class="services-grid">
+                        <div class="service-detailed">
+                            <div class="service-icon">
+                                <svg viewBox="0 0 24 24" width="48" height="48" stroke="currentColor" stroke-width="2" fill="none">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <polyline points="12 6 12 12 16 14"></polyline>
+                                </svg>
+                            </div>
+                            <div class="service-info">
+                                <h4>Health Screenings</h4>
+                                <p>Regular health screenings can help detect health issues before they become serious. We offer various screening programs tailored to different age groups and risk factors.</p>
+                                <ul class="service-features">
+                                    <li>Annual Physical Examinations</li>
+                                    <li>Cancer Screenings</li>
+                                    <li>Cardiovascular Risk Assessment</li>
+                                    <li>Diabetes Screening</li>
+                                    <li>Bone Density Testing</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="service-detailed">
+                            <div class="service-icon">
+                                <svg viewBox="0 0 24 24" width="48" height="48" stroke="currentColor" stroke-width="2" fill="none">
+                                    <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path>
+                                    <line x1="4" y1="22" x2="4" y2="15"></line>
+                                </svg>
+                            </div>
+                            <div class="service-info">
+                                <h4>Immunizations</h4>
+                                <p>We provide immunizations for all age groups to protect against various infectious diseases, following the recommended vaccination schedules.</p>
+                                <ul class="service-features">
+                                    <li>Childhood Vaccinations</li>
+                                    <li>Adolescent Immunizations</li>
+                                    <li>Adult Vaccinations</li>
+                                    <li>Travel Immunizations</li>
+                                    <li>Seasonal Flu Shots</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="service-detailed">
+                            <div class="service-icon">
+                                <svg viewBox="0 0 24 24" width="48" height="48" stroke="currentColor" stroke-width="2" fill="none">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                                    <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                                </svg>
+                            </div>
+                            <div class="service-info">
+                                <h4>Health Education</h4>
+                                <p>Our health education programs aim to empower individuals with knowledge and skills to maintain good health and prevent diseases.</p>
+                                <ul class="service-features">
+                                    <li>Nutritional Counseling</li>
+                                    <li>Weight Management Programs</li>
+                                    <li>Smoking Cessation</li>
+                                    <li>Stress Management</li>
+                                    <li>Chronic Disease Management</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="category-content" id="emergency">
+                    <h3>Emergency Services</h3>
+                    <p>Our emergency department is equipped to handle medical emergencies of all kinds, providing prompt and effective care when you need it most.</p>
+                    <div class="services-grid">
+                        <div class="service-detailed">
+                            <div class="service-icon">
+                                <svg viewBox="0 0 24 24" width="48" height="48" stroke="currentColor" stroke-width="2" fill="none">
+                                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                                </svg>
+                            </div>
+                            <div class="service-info">
+                                <h4>24/7 Emergency Care</h4>
+                                <p>Our emergency department is open 24 hours a day, 7 days a week, staffed with experienced emergency physicians and nurses ready to provide immediate care for critical conditions.</p>
+                                <ul class="service-features">
+                                    <li>Trauma Care</li>
+                                    <li>Cardiac Emergencies</li>
+                                    <li>Stroke Management</li>
+                                    <li>Respiratory Emergencies</li>
+                                    <li>Pediatric Emergency Services</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="service-detailed">
+                            <div class="service-icon">
+                                <svg viewBox="0 0 24 24" width="48" height="48" stroke="currentColor" stroke-width="2" fill="none">
+                                    <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                                    <path d="M7 20v-2"></path>
+                                    <path d="M17 20v-2"></path>
+                                    <path d="M7 15h.01"></path>
+                                    <path d="M11 15h.01"></path>
+                                    <path d="M15 15h.01"></path>
+                                    <path d="M7 10h.01"></path>
+                                    <path d="M11 10h.01"></path>
+                                    <path d="M15 10h.01"></path>
+                                </svg>
+                            </div>
+                            <div class="service-info">
+                                <h4>Urgent Care</h4>
+                                <p>For non-life-threatening conditions that require prompt attention, our urgent care services provide timely medical care without the wait times typically associated with emergency departments.</p>
+                                <ul class="service-features">
+                                    <li>Minor Injuries</li>
+                                    <li>Fever and Flu Symptoms</li>
+                                    <li>Sprains and Strains</li>
+                                    <li>Cuts and Lacerations</li>
+                                    <li>Infections</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="service-detailed">
+                            <div class="service-icon">
+                                <svg viewBox="0 0 24 24" width="48" height="48" stroke="currentColor" stroke-width="2" fill="none">
+                                    <path d="M4 11a9 9 0 0 1 9 9"></path>
+                                    <path d="M4 4a16 16 0 0 1 16 16"></path>
+                                    <circle cx="5" cy="19" r="1"></circle>
+                                </svg>
+                            </div>
+                            <div class="service-info">
+                                <h4>Ambulance Services</h4>
+                                <p>Our ambulance services provide rapid response and transportation to our emergency department for patients experiencing medical emergencies.</p>
+                                <ul class="service-features">
+                                    <li>Advanced Life Support</li>
+                                    <li>Basic Life Support</li>
+                                    <li>Critical Care Transport</li>
+                                    <li>Neonatal Transport</li>
+                                    <li>Inter-facility Transfers</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Need More Information?</h2>
+                <p>Our healthcare team is ready to answer any questions about our services</p>
+                <a href="contact.html" class="btn btn-primary">Contact Us Today</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <div class="footer-logo">
+                        <img src="assets/logo.svg" alt="MediCare Hospital Logo">
+                        <span>MediCare Hospital</span>
+                    </div>
+                    <p>Providing quality healthcare services since 1995.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="doctors.html">Our Doctors</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li>
+                            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            <span>123 Medical Center Drive, Healthcare City</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                            <span>(123) 456-7890</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                            <span>info@medicarehospital.com</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-hours">
+                    <h3>Working Hours</h3>
+                    <ul>
+                        <li><span>Emergency:</span> 24/7</li>
+                        <li><span>Regular Outpatient:</span> Mon-Fri 8:00AM - 8:00PM</li>
+                        <li><span>Weekend Outpatient:</span> Sat-Sun 10:00AM - 4:00PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 MediCare Hospital. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
